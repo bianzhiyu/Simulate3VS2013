@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="core.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mAsset.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mETFState.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mMotherFundState.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mNStrategy.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mObjectCategory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mOperation.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mOperationCategory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mPositionState.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mQueue.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mSimulateMethods.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mSonFundState.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mStockState.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mStockStreamListener.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mStructuredFundState.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mTime.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mTradeDetail.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mAsset.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mETFState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mMotherFundState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mNStrategy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mObjectCategory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mOperation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mOperationCategory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mPositionState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mQueue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mSimulateMethods.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mSonFundState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mStockState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mStockStreamListener.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mStructuredFundState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mTime.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mTradeDetail.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="000018.csv">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="150085.csv">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="150086.csv">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="159902.csv">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="sz150018.csv">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="sz150019.csv">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="sz150085.csv">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="sz150086.csv">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="sz399005.csv">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="sz399330.csv">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="基金序号.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="Result.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{65C40B1D-E618-4CF2-A1AB-E12A1AC081F3}</ProjectGuid>
+    <RootNamespace>Simulate3</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="core.cpp" />
+    <ClCompile Include="mAsset.cpp" />
+    <ClCompile Include="mETFState.cpp" />
+    <ClCompile Include="mMotherFundState.cpp" />
+    <ClCompile Include="mNStrategy.cpp" />
+    <ClCompile Include="mObjectCategory.cpp" />
+    <ClCompile Include="mOperation.cpp" />
+    <ClCompile Include="mOperationCategory.cpp" />
+    <ClCompile Include="mPositionState.cpp" />
+    <ClCompile Include="mQueue.cpp" />
+    <ClCompile Include="mSimulateMethods.cpp" />
+    <ClCompile Include="mSonFundState.cpp" />
+    <ClCompile Include="mStockState.cpp" />
+    <ClCompile Include="mStockStreamListener.cpp" />
+    <ClCompile Include="mStructuredFundState.cpp" />
+    <ClCompile Include="mTime.cpp" />
+    <ClCompile Include="mTradeDetail.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mAsset.h" />
+    <ClInclude Include="mETFState.h" />
+    <ClInclude Include="mMotherFundState.h" />
+    <ClInclude Include="mNStrategy.h" />
+    <ClInclude Include="mObjectCategory.h" />
+    <ClInclude Include="mOperation.h" />
+    <ClInclude Include="mOperationCategory.h" />
+    <ClInclude Include="mPositionState.h" />
+    <ClInclude Include="mQueue.h" />
+    <ClInclude Include="mSimulateMethods.h" />
+    <ClInclude Include="mSonFundState.h" />
+    <ClInclude Include="mStockState.h" />
+    <ClInclude Include="mStockStreamListener.h" />
+    <ClInclude Include="mStructuredFundState.h" />
+    <ClInclude Include="mTime.h" />
+    <ClInclude Include="mTradeDetail.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="000018.csv" />
+    <None Include="150085.csv" />
+    <None Include="150086.csv" />
+    <None Include="159902.csv" />
+    <None Include="ClassDiagram.cd" />
+    <None Include="sz150018.csv" />
+    <None Include="sz150019.csv" />
+    <None Include="sz150085.csv" />
+    <None Include="sz150086.csv" />
+    <None Include="sz399005.csv" />
+    <None Include="sz399330.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Result.txt" />
+    <Text Include="基金序号.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
