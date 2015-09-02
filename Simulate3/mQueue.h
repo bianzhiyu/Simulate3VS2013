@@ -1,7 +1,7 @@
 /*
 *Author	:	bianzhiyu@126.com
 *IDE	:	VS2013
-*Tiem	:	2015/08/27 , 14:56
+*Tiem	:	2015/09/02 , 21:22
 *In one namespace : mclstd
 *A custom template class mQueue , with standard fist-in-fisrt-out property
 *  template <class State>  class mQueue
@@ -23,12 +23,11 @@ namespace mclstd
 	class mQueue
 	{
 	public:
-		template<class State>
 		class mNode
 		{
 		public:
 			State Cont;
-			mNode<State>* Next;
+			mNode* Next;
 		public:
 			mNode() :Cont()
 			{
@@ -45,7 +44,7 @@ namespace mclstd
 		};
 	protected:
 		int Size;
-		mNode<State> Head, *Tail;
+		mNode Head, *Tail;
 	public:
 		//Constructor
 		mQueue() :Head()
@@ -55,7 +54,7 @@ namespace mclstd
 		int getSize() const { return Size; }
 		void pushin(const State& mm)
 		{
-			mNode<State> * pt = new mNode<State>;
+			mNode * pt = new mNode;
 			pt->Cont = mm;
 			pt->Next = NULL;
 			Tail->Next = pt;
@@ -65,7 +64,7 @@ namespace mclstd
 		void popout()
 		{
 			if (Size < 1)	return;
-			mNode<State>* pt = &Head;
+			mNode* pt = &Head;
 			while (pt->Next != Tail)
 				pt = pt->Next;
 			pt->Next = NULL;
@@ -94,7 +93,7 @@ namespace mclstd
 				return;
 			}
 
-			mNode<State> *mpt = mm.Head.Next, *pt = new mNode<State>;
+			mNode *mpt = mm.Head.Next, *pt = new mNode;
 			pt->Cont = mpt->Cont;
 			pt->Next = NULL;
 			Head.Next = pt;
@@ -102,7 +101,7 @@ namespace mclstd
 			while (mpt->Next)
 			{
 				mpt = mpt->Next;
-				mNode<State> *tmp = new mNode<State>(mpt->Cont, NULL);
+				mNode *tmp = new mNode(mpt->Cont, NULL);
 				pt->Next = tmp;
 				pt = pt->Next;
 			}
@@ -123,13 +122,13 @@ namespace mclstd
 				return *this;
 			}
 
-			mNode<State> * pt = new mNode<State>(mm.Head.Next->Cont, NULL), *mpt = mm.Head.Next;
+			mNode * pt = new mNode(mm.Head.Next->Cont, NULL), *mpt = mm.Head.Next;
 			Head.Next = pt;
 
 			while (mpt->Next)
 			{
 				mpt = mpt->Next;
-				mNode<State> *tmp = new mNode<State>(mpt->Cont, NULL);
+				mNode *tmp = new mNode(mpt->Cont, NULL);
 				pt->Next = tmp;
 				pt = pt->Next;
 			}
@@ -141,7 +140,7 @@ namespace mclstd
 		{
 			if (Size < 1) return;
 
-			mNode<State> * pt = Head.Next, *pt2;
+			mNode * pt = Head.Next, *pt2;
 			while (pt)
 			{
 				pt2 = pt->Next;
@@ -157,7 +156,7 @@ namespace mclstd
 		{
 			if (Size < 1) return;
 
-			mNode<State> * pt = Head.Next, *pt2;
+			mNode * pt = Head.Next, *pt2;
 			while (pt)
 			{
 				pt2 = pt->Next;
@@ -174,7 +173,7 @@ namespace mclstd
 		void show(std::ostream& osm = std::cout) const
 		{
 			if (Size < 1) return;
-			mNode<State> * pt = Head.Next;
+			mNode * pt = Head.Next;
 			while (pt)
 			{
 				std::cout << pt->Cont << "\t";
@@ -196,7 +195,7 @@ namespace mclstd
 	std::ostream& operator << (std::ostream & osm, const mQueue<State>& mm)
 	{
 		if (mm.Size < 1) return osm;
-		mNode<State> *pt = mm.Head.Next;
+		mQueue<State>::mNode *pt = mm.Head.Next;
 		while (pt)
 		{
 			osm << pt->Cont << "\t";

@@ -1,7 +1,7 @@
 /*
 Author : bianzhiyu@126.com
 IDE    : VS2013
-Time   : 2015/8/27 15:36
+Time   : 2015/9/2 21:24
 */
 #pragma once
 #ifndef __mSimulateMethods
@@ -52,10 +52,10 @@ public:
 	void filter(mTime StartTime, mTime EndTime)
 	{
 		if (Size < 1) return;
-		mNode<mTradeDetail> * pt = &Head;
+		mNode * pt = &Head;
 		while (pt->Next)
 		{
-			mNode<mTradeDetail> * pt2 = pt->Next;
+			mNode * pt2 = pt->Next;
 			if ((pt2->Cont.getTime()<StartTime) || (pt2->Cont.getTime()>EndTime))
 			{
 				pt->Next = pt2->Next;
@@ -70,7 +70,7 @@ public:
 	int getMaxTotalTurnover() const
 	{
 		if (Size < 1)  return 0;
-		mNode<mTradeDetail> * pt = Head.Next;
+		mNode * pt = Head.Next;
 		int d = pt->Cont.getTotalTurnover();
 		while (pt->Next)
 		{
@@ -82,7 +82,7 @@ public:
 	int getMinTotalTurnover() const
 	{
 		if (Size < 1)  return 0;
-		mNode<mTradeDetail> * pt = Head.Next;
+		mNode * pt = Head.Next;
 		int d = pt->Cont.getTotalTurnover();
 		while (pt->Next)
 		{
