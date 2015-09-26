@@ -1,7 +1,7 @@
 /*
 *Author	:	bianzhiyu@126.com
 *IDE	:	VS2013
-*Time	:	2015/08/31 , 19:35
+*Time	:	2015/09/26 
 */
 /*
 *Head Files: Controlling files, Data structure files, Processing files
@@ -120,9 +120,13 @@ int main(int argc,char *argv)
 {
 	VectorTradeDetail DataSFundA,DataSFundB,DataIndex;		//A:sz150018, B:sz150019, M:161812, Index:sz399330
 	
+	std::cout << "Reading Files...\n";
+
 	inputRawData(DataSFundA, "sz150018.csv");
 	inputRawData(DataSFundB, "sz150019.csv");
 	inputRawData(DataIndex, "sz399330.csv");
+
+	std::cout << "Succeed reading files.\n";
 
 	mAsset InitAsset;		//Initial state
 	setInitialAsset(InitAsset);
@@ -132,12 +136,18 @@ int main(int argc,char *argv)
 		//StrategyStreamAB:  operations on AB
 		//StrategyStreamM:     operations on FoFs
 
+	std::cout << "Starting simulating...\n";
+
 	//update position of mAsset at 00:00:00  !!
 	SimulateOneDay2(InitAsset, DataSFundA, DataSFundB, DataIndex, StrategyStreamAB, StrategyStreamM, TerminalAsset);
 	//update closing price of mAsset at closing market !!
 
+	std::cout << "Terminate simulating.\nPrint result...\n";
+
 	PrintResult(StrategyStreamAB, StrategyStreamM, InitAsset, TerminalAsset);
 	
+	std::cout << "End for printting result...\n";
+
 	system("pause");
 	return 0;
 }
